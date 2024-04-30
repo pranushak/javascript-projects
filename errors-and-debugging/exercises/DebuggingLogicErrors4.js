@@ -28,6 +28,7 @@ if (crewStatus && computerStatus === 'green'){
 }
 
 console.log("launchReady = ", launchReady);
+//As per fuelLevel,crewStatus and computerStatus the launchReady value is changing. The program is not behaving as expected.
 
 // if (launchReady) {
 //    console.log('10, 9, 8, 7, 6, 5, 4, 3, 2, 1...');
