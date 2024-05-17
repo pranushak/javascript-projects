@@ -31,7 +31,7 @@ function askForNumber() {
   let numMeals = input.question("How many meals would you like to make? ");
 
   /// CODE YOUR SOLUTION TO PART B here ///
-  while(numMeals > 6){
+  while(numMeals > 6 || numMeals == 0){
      numMeals = input.question("How many meals would you like to make? ");
   }
   return numMeals;
