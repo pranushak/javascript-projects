@@ -55,3 +55,37 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
 
+*/
+let stealFuelLevel = function(sfl){
+  if(checkFuel(sfl) === 'green'){
+    return sfl - 100010;
+  }else if(checkFuel(sfl) === 'yellow'){
+    return sfl - 50010;
+  }else{
+    return sfl;
+  }
+};
+let newArr = [];
+//newArr.push(chArr[0],chArr[4]);
+let stealCargo = function(chArr){
+  newArr.push(chArr[0],chArr[4]);
+  chArr[0] = 'drinks';
+  chArr[4] = 'snacks';
+  if(chArr.length < 7){
+   return `Spaces available: ${7-arr.length}.`;
+  }else if(chArr.length > 7){
+    return `Over capacity by ${arr.length-7} items.`;
+  }else{
+    return "Full";
+  }
+}
+
+let irs = function (levelOfFuel, itemsInCargo){
+  return `Raided ${stealFuelLevel(fuelLevel)} kg of fuel from the tanks, and stole ${newArr[0]} and ${newArr[1]} from the cargo hold.`
+}
+
+console.log(stealFuelLevel(fuelLevel));
+console.log(stealCargo(cargoHold));
+console.log(irs(stealFuelLevel(fuelLevel),stealCargo(cargoHold)))
+
+
