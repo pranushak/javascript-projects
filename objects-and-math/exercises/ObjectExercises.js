@@ -47,7 +47,10 @@ let arrayOfAnimals = [superChimpOne,salamander,chimpTwo,beagle,tardigrade];
 
 for(let i = 0; i < arrayOfAnimals.length; i++){
    arrayOfAnimals[i]["astronautID"] = Math.trunc((Math.random() * 10) + 1);
-    
+   arrayOfAnimals[i]["move"] = function (){
+      return Math.floor((Math.random() * 10) + 1);
+   };
+   console.log(arrayOfAnimals[i].move());
  }
 
  function crewReports(arrayOfAnimals){
@@ -59,7 +62,19 @@ for(let i = 0; i < arrayOfAnimals.length; i++){
  }
 
  function fitnessTest(arr){
-   
+   let results = [];
+   let numberOfSteps;
+   let turns;
+ for(let i = 0;i < arr.length; i++){
+   numberOfSteps = 0;
+   turns = 0;
+   while(numberOfSteps < 20){
+      numberOfSteps = numberOfSteps + arr[i].move();
+      turns++;
+   }
+    results.push(`${arr[i].name} took ${turns} turns to take 20 steps.`);
+   }
+ return results;
  }
-
  console.log(crewReports(arrayOfAnimals));
+ console.log(fitnessTest(arrayOfAnimals));
