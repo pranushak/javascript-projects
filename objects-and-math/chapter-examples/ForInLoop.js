@@ -6,4 +6,8 @@ let tortoiseOne = {
    diet: ["pumpkins", "lettuce", "cabbage"]
 };
 
-// Using a for..in loop, iterate through each property in the tortoiseOne object and print the value to the console.
+// Using a for..in loop, iterate through each property in the tortoiseOne object and print the value to the console.hdisj
+
+for(item in tortoiseOne){
+   console.log(item + ',' + tortoiseOne[item]);
+}

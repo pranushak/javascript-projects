@@ -7,6 +7,28 @@
       label { display: block; margin-bottom: 7px;}
     </style>
   </head>
+  <script>
+    window.addEventListener("load", function() {
+          let form = document.querySelector("form");
+          form.addEventListener("submit", function(event){
+            let testNameInput = document.querySelector("input[name=testName]");
+            let testDateInput = document.querySelector("input[name=testDate]");
+            let testRocketType = document.querySelector("select[name=rocketType]");
+            let testRocketBooster = document.querySelector("input[name=numberOfRocketBoosters]");
+            let testWindRating = document.querySelector("radio[name=windRating]");
+            let testGradeServers = document.querySelector("checkbox[name=gradeServers]");
+            if(testNameInput.value === "" ||
+               testDateInput.value === "" ||
+               testRocketType.value === "" ||
+               testRocketBooster.value === "" ||
+               testWindRating.value === "" ||
+               testGradeServers.value === ""){
+                alert("All fields are required!");
+                event.preventDefault();
+               }
+          });
+    })
+    </script>
   <body>
     <!-- TODO: add form here -->
     <form action="https://handlers.education.launchcode.org/request-parrot" method="POST">

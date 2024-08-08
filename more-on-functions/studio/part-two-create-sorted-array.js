@@ -20,27 +20,25 @@ function findMinValue(arr) {
 
 //Your function here...
 function sortArrayOfNumbers(numArr) {
-  let sortedArr = []; 
+  let sortedArray = []; 
   while (numArr.length > 0) {
     let min = findMinValue(numArr);
-    sortedArr.push(min);
+    sortedArray.push(min);
     let index = numArr.indexOf(min);
     numArr.splice(index, 1);
   }
-  return sortedArr;
+  return sortedArray;
 }
 
 
 /* BONUS MISSION: Refactor your sorting function to use recursion below:
  */
-function sortWithRecursion(nums){
-  sortedArr = [];
-  if(nums.length === 1){
-    return nums[0];
-  }else{
-    return sortedArr.push(findMinValue(nums))
-  }
-}
+// function sortWithRecursion(nums){
+//   let sortedArray = [];
+
+//   return sortedArray;
+// }
+
 //Sample arrays for testing:
 let nums1 = [5, 10, 2, 42];
 let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
