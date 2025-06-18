@@ -6,7 +6,7 @@
     <script>
         window.addEventListener("load", function () {
             // TODO: fetch planets JSON
-            let json = [];
+           // let json = [];
             fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
                 response.json().then(function (json) {
                     const destination = document.getElementById("destination");
@@ -14,8 +14,8 @@
                     destination.addEventListener("click", function () {
                         destination.innerHTML = `
             <div>
-               <h3>Planet ${json[2].name}</h3>
-               <img src=${json[2].image} height=250></img>
+               <h3>Planet ${json[1].name}</h3>
+               <img src=${json[1].image} height=250></img>
             </div>
          `;
          index = (index + 1) % json.length;
